@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'bootstrap.dart';
+import 'features/splash/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: _BootstrapGate()));
+}
+
+/// Watches [appBootstrapProvider] — shows the splash while loading,
+/// otherwise hands off to [MyApp]. Bootstrap is the one place to put real
+/// startup work; everything below stays as the default Flutter scaffold.
+class _BootstrapGate extends ConsumerWidget {
+  const _BootstrapGate();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final boot = ref.watch(appBootstrapProvider);
+    return boot.when(
+      loading: () => const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+      ),
+      error: (e, _) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(error: e),
+      ),
+      data: (_) => const MyApp(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
