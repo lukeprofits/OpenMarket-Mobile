@@ -1,0 +1,1 @@
+// TODO: CID-keyed JSON file store. <appDocs>/listings/<cid>.json. Methods: list(), getByCid(), upsertByCid(Listing) (merge seenFromSources/categories), delete(cid). Exposes broadcast Stream<List<Listing>>.

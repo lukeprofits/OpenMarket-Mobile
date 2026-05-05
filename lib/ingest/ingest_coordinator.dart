@@ -1,0 +1,1 @@
+// TODO: @Riverpod(keepAlive: true). On bootstrap and on settings change: for each enabled InboundSource, call start() and listen to incoming. For each RawDoc -> parser.parse -> categorizer.categorize -> repo.upsertByCid (merge seenFromSources). Toggling a source in settings -> start/stop only that source.

@@ -1,0 +1,1 @@
+// TODO: BluetoothSource implements InboundSource + OutboundSource. Uses flutter_blue_plus. Inbound: scan via DutyCycle, emit RawDoc on each ad hit. Outbound: advertise listing payload (verify advertising support per platform).

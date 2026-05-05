@@ -1,0 +1,1 @@
+// TODO: @Riverpod(keepAlive: true). publish(Listing) -> reads enabledOutbound from settings, awaits Future.wait of source.publish calls, returns List<PublishResult>. Per-result errors captured, never thrown to caller. UI surfaces aggregate ("posted to N/M sources").

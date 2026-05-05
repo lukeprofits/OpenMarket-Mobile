@@ -1,0 +1,1 @@
+// TODO: holds List<Source>. Provides typed views: inboundSources, outboundSources, enabledInbound(settings), enabledOutbound(settings). Filters by supportedPlatforms vs current TargetPlatform. Exposed via @Riverpod(keepAlive: true).

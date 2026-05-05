@@ -1,0 +1,1 @@
+// TODO: NostrSource implements In + Out. WebSocket per relay, auto-reconnect with backoff. Inbound: subscribe to filter set, push events as RawDoc. Outbound: sign + publish event to all configured relays; aggregate result.

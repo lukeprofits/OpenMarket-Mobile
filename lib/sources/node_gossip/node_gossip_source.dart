@@ -1,0 +1,1 @@
+// TODO: libp2p / gossip source. Listener exposes multiaddress; peers connect directly. Inbound: emit RawDoc per gossiped message. Outbound: gossip listing to connected peers. Native bridge code (gomobile/FFI) lives in this folder + android/ios native dirs — keep self-contained.

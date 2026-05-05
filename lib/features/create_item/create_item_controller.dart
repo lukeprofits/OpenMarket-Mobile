@@ -1,0 +1,1 @@
+// TODO: @riverpod. submit(): validate -> compute CID (placeholder uuid until IPFS in) -> build Listing -> repo.upsertByCid -> publishCoordinator.publish (await for UI feedback or unawaited for fire-and-forget).
